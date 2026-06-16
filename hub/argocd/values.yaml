@@ -1,0 +1,12 @@
+server:
+  service:
+    type: LoadBalancer
+
+configs:
+  params:
+    server.insecure: "true"
+
+  repositories:
+    fleet-repo:
+      url: git@github.com:sahshik/fleet-repo.git
+      type: git
