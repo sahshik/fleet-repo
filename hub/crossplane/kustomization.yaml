@@ -6,3 +6,5 @@ resources:
   - providers/providers.yaml
   - providers/runtimeconfig.yaml
   - providers/aws-providerconfig.yaml
+  - providers/azure-providerconfig.yaml
+  - providers/gcp-providerconfig.yaml
