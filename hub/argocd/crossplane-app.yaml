@@ -1,8 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
-
 metadata:
-  name: hub-apps
+  name: crossplane
   namespace: argocd
 
 spec:
@@ -11,13 +10,16 @@ spec:
   source:
     repoURL: https://github.com/sahshik/fleet-repo.git
     targetRevision: HEAD
-    path: hub/argocd
+    path: hub/crossplane
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: crossplane-system
 
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+
+    syncOptions:
+      - CreateNamespace=true
