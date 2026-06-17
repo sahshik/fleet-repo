@@ -9,7 +9,7 @@ metadata:
   name: nginx
   namespace: argocd-test
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: nginx
