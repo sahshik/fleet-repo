@@ -24,7 +24,7 @@ spec:
         path: addons/base
         helm:
           valueFiles:
-            - "../../addons/{{name}}/values.yaml"
+            - "../{{name}}/values.yaml"
 
       destination:
         server: "{{server}}"
