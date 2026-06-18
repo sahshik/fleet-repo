@@ -6,6 +6,6 @@ metrics-server:
 
 keda:
   crds:
-    install: true 
-    operator:    
-          replicaCount: 1
+    install: false
+  operator:
+    replicaCount: 1
