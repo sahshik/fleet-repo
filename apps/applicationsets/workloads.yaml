@@ -12,7 +12,7 @@ spec:
                 matchLabels:
                   argocd.argoproj.io/secret-type: cluster
           - git:
-              repoURL: git@github.com:sahshik/fleet-repo.git
+              repoURL: https://github.com/sahshik/fleet-repo.git
               revision: HEAD
               directories:
                 - path: apps/base/*
@@ -22,7 +22,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: git@github.com:sahshik/fleet-repo.git
+        repoURL: https://github.com/sahshik/fleet-repo.git
         targetRevision: HEAD
         path: "apps/base/{{path.basename}}"
       destination:
