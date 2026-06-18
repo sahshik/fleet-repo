@@ -1,7 +1,8 @@
 cert-manager:
   installCRDs: true
 
-keda:
-  operator:
-    replicaCount: 1
+metrics-server:
+  enabled: true
 
+keda:
+  enabled: false
