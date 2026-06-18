@@ -5,4 +5,7 @@ metrics-server:
   enabled: true
 
 keda:
-  enabled: false
+  crds:
+    install: false
+  operator:
+    replicaCount: 2
