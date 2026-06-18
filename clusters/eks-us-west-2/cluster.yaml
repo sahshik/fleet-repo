@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cluster-metadata
+  namespace: argocd
+  labels:
+    cloud: aws
+    region: us-west-2
+    env: production
+data:
+  name: eks-us-west-2
+  server: "https://900998607F452232291AAF37CD5E7063.gr7.us-west-2.eks.amazonaws.com"
+

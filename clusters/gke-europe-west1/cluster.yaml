@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cluster-metadata
+  namespace: argocd
+  labels:
+    cloud: gcp
+    region: europe-west1
+    env: production
+data:
+  name: gke-europe-west1
+  server: "https://34.53.162.250"
