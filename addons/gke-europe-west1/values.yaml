@@ -1,0 +1,7 @@
+cert-manager:
+  installCRDs: true
+
+keda:
+  operator:
+    replicaCount: 1
+
