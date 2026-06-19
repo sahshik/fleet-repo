@@ -38,3 +38,7 @@ prometheus-pushgateway:
 
 kube-state-metrics:
   enabled: true
+
+cert-manager:
+  startupapicheck:
+    enabled: false
