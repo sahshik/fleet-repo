@@ -28,3 +28,8 @@ prometheus-pushgateway:
 
 kube-state-metrics:
   enabled: true
+
+serverFiles:
+  prometheus.yml:
+    remote_write:
+      - url: http://ad883df6fcc5d4fa88ffa5ff8696d51f-2061370524.us-east-1.elb.amazonaws.com:19291/api/v1/receive
