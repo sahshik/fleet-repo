@@ -1,0 +1,12 @@
+apiVersion: platform.example.com/v1alpha1
+kind: Database
+metadata:
+  name: orders-db
+  namespace: app
+spec:
+  parameters:
+    storageGB: 20
+    engine: postgres
+  compositionSelector:
+    matchLabels:
+      provider: aws
