@@ -16,6 +16,8 @@ prometheus:
 
   alertmanager:
     enabled: false
+    persistence:
+      enabled: false
 
   prometheus-pushgateway:
     enabled: false
