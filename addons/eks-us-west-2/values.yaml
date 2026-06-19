@@ -24,3 +24,17 @@ prometheus:
 
   kube-state-metrics:
     enabled: true
+server:
+  persistentVolume:
+    enabled: false
+
+alertmanager:
+  enabled: false
+  persistence:
+    enabled: false
+
+prometheus-pushgateway:
+  enabled: false
+
+kube-state-metrics:
+  enabled: true
