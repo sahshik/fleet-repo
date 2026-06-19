@@ -1,0 +1,51 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: thanos
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://charts.bitnami.com/bitnami
+    chart: thanos
+    targetRevision: "12.x"
+    helm:
+      values: |
+        image:
+          registry: quay.io
+          repository: thanos/thanos
+          tag: v0.36.1
+
+        receive:
+          enabled: true
+          persistence:
+                enabled: false
+          service:
+              type: LoadBalancer
+        query:
+          enabled: true
+
+        queryFrontend:
+          enabled: true
+
+        storegateway:
+          enabled: false
+
+        compactor:
+          enabled: false
+
+        bucketweb:
+          enabled: false
+
+        ruler:
+          enabled: false
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: monitoring
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
