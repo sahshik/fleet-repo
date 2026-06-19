@@ -1,1 +1,13 @@
-{}
+prometheus:
+  server:
+    persistentVolume:
+      enabled: false
+
+  alertmanager:
+    enabled: false
+
+  prometheus-pushgateway:
+    enabled: false
+
+  kube-state-metrics:
+    enabled: true
