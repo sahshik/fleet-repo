@@ -1,5 +1,7 @@
 cert-manager:
   installCRDs: true
+  startupapicheck:
+    enabled: false
 
 metrics-server:
   enabled: true
@@ -9,26 +11,13 @@ keda:
     install: false
   operator:
     replicaCount: 1
-prometheus:
-  server:
-    persistentVolume:
-      enabled: false
 
-  alertmanager:
-    enabled: false
-    persistence:
-      enabled: false
-
-  prometheus-pushgateway:
-    enabled: false
-
-  kube-state-metrics:
-    enabled: true
 server:
   persistentVolume:
     enabled: false
   remoteWrite:
     - url: http://ad883df6fcc5d4fa88ffa5ff8696d51f-2061370524.us-east-1.elb.amazonaws.com:19291/api/v1/receive
+
 alertmanager:
   enabled: false
   persistence:
@@ -39,7 +28,3 @@ prometheus-pushgateway:
 
 kube-state-metrics:
   enabled: true
-
-cert-manager:
-  startupapicheck:
-    enabled: false
